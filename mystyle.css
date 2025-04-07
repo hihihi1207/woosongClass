@@ -1,0 +1,24 @@
+#menu{
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 10px 0;
+}
+#menu li{
+    display: inline;
+    margin: 0 10px;
+}
+#menu a{
+    text-decoration: none;
+    color: #000;
+}
+#menu a:hover{
+    text-decoration: underline;
+}
+
+#left>ul{background-color: gray; list-style-type: none; margin: 0; padding: 0; width: 200px;}
+#left>ul>li{border-bottom: 1px solid black; text-decoration-color: white;}
+#left>h4{margin: 0px;}
+
+#left>li{display: block;}
