@@ -3,13 +3,13 @@ void Onefun();      //함수 선언
 void Twofun(int a, int b);
 float Threefun(int a, int b);
 float Fourfun(int* a, int* b);
-int main(void) { 
+int main(void) {  // 메인 프로그램
 	int a = 5, b = 3;
-	Onefun();
-	Twofun(a, b);
-	float f1 = Threefun(a, b);
-	printf("Threefun result : %6.3f \n", f1);
-	float f2 = Fourfun(&a, &b);
+	Onefun(); //첫 번쨰 함수 불러오기
+	Twofun(a, b); //두번쨰 
+	float f1 = Threefun(a, b); //새번쨰
+	printf("Threefun result : %6.3f \n", f1); 
+	float f2 = Fourfun(&a, &b); //네번쨰
 	printf("Fourfun result : %6.3f\n", f2);
 }
 
