@@ -1,0 +1,64 @@
+@keyframes color{
+    from{background-color: rgba(157, 0, 255, 0.767);}
+    to{background-color: rgb(38, 0, 255);}
+    
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+div{
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+header{
+    height: 10%;
+    animation-name: color;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+
+#menu{
+    /* width: min-content; */
+    background-color: rgb(243, 241, 241);
+    padding-right: 10px;
+}
+
+#menu li{
+    list-style-type: none;
+    padding: 10px;
+    padding-right: 100px;
+    margin: 2px;
+    background-color: rgb(217, 212, 212);
+}
+
+#menu ul li:hover{
+    background-color: rgb(98, 50, 232);
+}
+
+section{ 
+    flex: 1;
+    width:100;
+    display: inline-flex;
+    background-color: rgb(248, 248, 193);
+}
+
+footer{
+    text-align: center;
+    position: fixed; 
+    bottom: 0px; 
+    height: 5%; 
+    width: 100%;
+    background-color: rgb(217, 212, 212);
+}
