@@ -3,31 +3,31 @@
 int cashIn = 0;
 int cashOut = 0;
 
-void Credit_In(int cashIn);
-void Credit_Out(int cashOut);
+void Credit_In(int cashIn); //ë‚´ë¶€ ì€í–‰ í•¨ìˆ˜ ì„ ì–¸
+void Credit_Out(int cashOut); //ì™¸ë¶€ ì€í–‰ í•¨ìˆ˜ ì„ ì–¸
 
-int main()
+int main() //ë©”ì¸ í•¨ìˆ˜
 {
 	int sel_Bank;
 
 	while (1) {
-		printf("\n³»ºÎ ¿¬°á ÀºÇà(i/I) ¾Æ´Ï¸é ¿ÜºÎ ¿¬°á ÀºÇà(O/o) ");
+		printf("\në‚´ë¶€ ì—°ê²° ì€í–‰(i/I) ì•„ë‹ˆë©´ ì™¸ë¶€ ì—°ê²° ì€í–‰(O/o) ");
 
 
 		sel_Bank = getchar();
 		while (getchar() != '\n');
 
 		if (sel_Bank == 'i' || sel_Bank == 'I') {
-			printf("³»ºÎÀºÇà ¿¬°á");
-			Credit_In(cashIn);
+			printf("ë‚´ë¶€ì€í–‰ ì—°ê²°");
+			Credit_In(cashIn); //ë‚´ë¶€ í•¨ìˆ˜ í˜¸ì¶œ
 
 		}
 		else if (sel_Bank == 'o' || sel_Bank == 'O') {
-			printf("¿ÜºÎÀºÇà ¿¬°á");
-			Credit_Out(cashOut);
+			printf("ì™¸ë¶€ì€í–‰ ì—°ê²°");
+			Credit_Out(cashOut); //ì™¸ë¶€ í•¨ìˆ˜ í˜¸ì¶œ
 		}
 		else {
-			printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n");
+			printf("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.\n");
 			break;
 		}
 	}
@@ -35,17 +35,17 @@ int main()
 	return 0;
 }
 
-void Credit_In(int cashIn)
+void Credit_In(int cashIn) //ë‚´ë¶€ ì€í–‰ í•¨ìˆ˜
 {
-	static int balance = 0;
+	static int balance = 0; //ì •ì  ë‚´ë¶€ ì •ìˆ˜í˜• ë³€ìˆ˜
 
-	for (int i = 1; i < 4; i++) 
+	for (int i = 1; i < 4; i++)  //3íšŒ ì‹¤í–‰
 	{
-		printf("\n%dÈ¸ ½ÇÇà\n", i);
-		printf("³»ºÎÀºÇà Çö±İ: \n");
+		printf("\n%díšŒ ì‹¤í–‰\n", i);
+		printf("ë‚´ë¶€ì€í–‰ í˜„ê¸ˆ: \n");
 		scanf_s("%d", &cashIn);
 
-		printf("ÀÔ±İ\t\tÃâ±İ\t\tÀÜ¾×\n");
+		printf("ì…ê¸ˆ\t\tì¶œê¸ˆ\t\tì”ì•¡\n");
 
 		if (cashIn >= 0) {
 			printf("%d\t\t\t\t", cashIn);
