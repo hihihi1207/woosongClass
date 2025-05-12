@@ -41,7 +41,7 @@ void Credit_In(int cashIn) //내부 은행 함수
 
 	for (int i = 1; i < 4; i++)  //3회 실행
 	{
-		printf("\n%d회 실행\n", i);
+		printf("\n%d회 실행\n", i);  //여기서 부터 은행 프로그램
 		printf("내부은행 현금: \n");
 		scanf_s("%d", &cashIn);
 
