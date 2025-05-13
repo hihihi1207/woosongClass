@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 문법 실습</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    button { margin: 5px; padding: 10px; }
+    #output { margin-top: 20px; padding: 10px; border: 1px solid #aaa; white-space: pre-line; background: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+<h2>JavaScript 문법 실습</h2>
+
+<button onclick="ex1()">변수와 출력</button>
+<button onclick="ex2()">조건문</button>
+<button onclick="ex3()">반복문</button>
+<button onclick="ex4()">함수</button>
+<button onclick="ex5()">배열</button>
+<button onclick="ex6()">객체</button>
+<button onclick="clearOutput()">출력 지우기</button>
+
+<div id="output"> 여기에 결과가 출력됩니다.</div>
+<script>
+  function print(message){
+    document.getElementById("output").innerText = message;
+  }
+  function ex1(){
+    let name = prompt("이름을 입력하세요: ");
+    let age = prompt("나이를 입력하세요: ");
+    print(`안녕하세요, ${name}님. \n`);
+    print(`당신의 나이는 ${age}세입니다.`); 
+  }
+
+  function ex2(){
+    let number = prompt("점수를 입력하세요: ");
+    if (number >= 90) {
+      print(`A`);
+    } else if (number >= 80) {
+      print(`B`);
+    } else if (number >= 70) {
+      print(`C`);
+    }
+    else {
+      print(`재수강`);
+    }
+  }
+
+  function ex3(){
+    const input = prompt("계산식을 입력하세요 (예: 3+5, 10/2, 7*(2+1)):");
+
+  if (!/^[0-9+\-*/().\s]+$/.test(input)) {
+    print("허용되지 않은 문자가 있습니다.");
+  } else {
+    try {
+      const result = eval(input);
+      print("결과: " + result);
+    } catch {
+      print("계산에 실패했습니다.");
+    }
+  }
+  } 
+  
+  function ex4(){
+    let player = prompt("가위, 바위, 보 중 하나를 입력하세요: ");
+    let computer = Math.floor(Math.random() * 3);
+    if (computer == 0) {
+      computer = "가위";
+    } else if (computer == 1) {
+      computer = "바위";
+    } else {
+      computer = "보";
+    }
+    if (player == computer) {
+      print(`컴퓨터:${computer} 비겼습니다.`);
+    } else if ((player == "가위" && computer == "보") || 
+               (player == "바위" && computer == "가위") || 
+               (player == "보" && computer == "바위")) {
+      print(`컴퓨터:${computer} 플레이어 승리!`);
+    } else {
+      print(`컴퓨터:${computer} 컴퓨터 리!`);
+    }
+  }
+  
+  function ex6(){
+    let car = {
+      brand: prompt("자동차 브랜드를 입력하세요: "),
+      model: prompt("자동차 모델을 입력하세요: "),
+      year: prompt("자동차 연식을 입력하세요: "),
+      color: prompt("자동차 색상을 입력하세요: ")
+    };
+
+    print(`자동차 정보
+    브랜드: ${car.brand}
+    모델: ${car.model}
+    연식: ${car.year}
+    색상: ${car.color}`);
+  }
+  
+  
+  function ex5(){
+    
+  }
+  function clearOutput(){
+    document.getElementById("output").innerText = "여기에 결과가 출력됩니다.";
+  }
+
+</script>
+
+</body>
+</html>
